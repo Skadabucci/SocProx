@@ -45,7 +45,7 @@ public class LoginActivity extends Activity {
 					"This device does not support Bluetooth.",
 					Toast.LENGTH_LONG).show();
 			Log.d(DEBUG_TAG, "Device does not support Bluetooth.");
-			//loginButton.setEnabled(false);
+			loginButton.setEnabled(false);
 		} else {
 			if (!mBluetoothAdapter.isEnabled()) {
 				// prompt user to enable bluetooth
@@ -59,7 +59,7 @@ public class LoginActivity extends Activity {
     	mProgressDialog.setMessage("Logging In");
     	mProgressDialog.setIndeterminate(true);
     	mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-    }
+    } 
     
     //Button listener (set in xml)
     public void onLoginButtonClicked(View v){
