@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#006699" >
+
+    <TextView
+        android:id="@+id/tv_challenge_dialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="3"
+        android:text="@string/loading_challenge"
+        android:typeface="serif"
+        android:textSize="20dp" />
+    
+	<!-- START SEPARATOR -->
+	<View 
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+		android:background="#006699"/>
+	<!-- END SEPARATOR -->
+	
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/challenge_info"
+	    android:background="#000000"
+	    android:textSize="16dp" />
+	
+	<!-- START SEPARATOR -->
+	<View 
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+		android:background="#006699"/>
+	<!-- END SEPARATOR -->
+	
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:background="#222222">
+	    
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content">
+	        
+	        <TextView
+	            android:text="@string/name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"/>
+	        <TextView 
+	            android:id="@+id/tv_challenge_suc_name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/loading"/>
+	        
+	        <!-- START SEPARATOR -->
+	        <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="2dp"
+	            android:background="#006699"/>
+	        <!-- END SEPARATOR -->
+	        
+	        <TextView
+	            android:text="@string/description"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"/>
+	        <TextView 
+	            android:id="@+id/tv_challenge_suc_description"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/loading"/>
+	        
+	        <!-- START SEPARATOR -->
+	        <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="2dp"
+	            android:background="#006699"/>
+	        <!-- END SEPARATOR -->
+	        
+	        <TextView
+	            android:text="@string/challenger"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"/>
+	        <TextView 
+	            android:id="@+id/tv_challenge_suc_challenger"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/loading"/>
+	        
+	    </LinearLayout>
+	    
+	</ScrollView>
+	<!--  -->
+	<!--  -->
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button 
+            android:id="@+id/btn_challenge_accepted"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/challenge_success"
+            android:onClick="onChallengeSuccessButtonClicked" />
+        
+        <Button
+            android:id="@+id/btn_challenge_denied"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/challenge_fail"
+            android:onClick="onChallengeFailButtonClicked" />
+        
+    </LinearLayout>
+
+</LinearLayout>

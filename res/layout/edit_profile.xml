@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#006699"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/firstname"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_firstname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_firstname"
+        android:singleLine="true"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lastname"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_lastname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_lastname"
+        android:singleLine="true"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"/>
+    
+    <ImageView
+       android:id="@+id/facebook_connect_image"
+	   android:src="@drawable/facebook_connect"
+	   android:layout_gravity="center"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:onClick="onFBConnectButtonClicked"
+	   android:contentDescription="@string/fbconnect" />
+    
+    <ImageView
+       android:id="@+id/twitter_connect_image"
+	   android:src="@drawable/twitter_connect"
+	   android:layout_gravity="center"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:onClick="onTwitterConnectButtonClicked"
+	   android:contentDescription="@string/twitterconnect" />
+    
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSaveButtonClicked"
+        android:text="@string/save" />
+    
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onCloseButtonClicked"
+        android:text="@string/close" />
+
+</LinearLayout>

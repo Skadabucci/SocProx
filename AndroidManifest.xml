@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.socialproximity.socprox"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.socialproximity.socprox.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.socialproximity.socprox.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".SocProxActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" > <!-- This is important for Twitter4J to work -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="socprox-app" android:host="socprox" />
+			</intent-filter>
+        </activity>
+        <service 
+            android:name=".ProximityService"
+            android:process=":proximity_process"
+            android:label="@string/service_name" >
+        </service>
+        <activity
+            android:name=".ChallengeAcceptanceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ChallengeViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ChallengeListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".UserStatsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".CommunityStatsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".GameActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".RegisterAliasActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" > <!-- This is important for Twitter4J to work -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="socprox-app" android:host="registerAlias" />
+			</intent-filter>
+        </activity>
+        <activity
+            android:name=".EditProfileActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" > <!-- This is important for Twitter4J to work -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="socprox-app" android:host="profile" />
+			</intent-filter>
+        </activity>
+        
+        
+        <!--  gcm stuff -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.socialproximity.socprox" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+    </application>
+
+</manifest>

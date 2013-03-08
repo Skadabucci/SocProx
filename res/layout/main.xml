@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#006699"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/logo" />
+
+    
+    <Button
+        android:id="@+id/btn_fblogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onFBLoginButtonClicked"
+        android:text="@string/fblogin" />
+    <Button
+        android:id="@+id/btn_twitterlogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onTwitterLoginButtonClicked"
+        android:text="@string/twitterlogin" />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onLoginButtonClicked"
+        android:text="@string/login" />
+    <Button
+        android:id="@+id/btn_create_account"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onCreateAccountButtonClicked"
+        android:text="@string/create_account" />
+
+</LinearLayout>

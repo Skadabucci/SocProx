@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#006699" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sync_prompt"
+        android:gravity="center" />
+    
+    <ImageView
+       android:id="@+id/facebook_connect_image"
+	   android:src="@drawable/facebook_connect"
+	   android:layout_gravity="center"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:onClick="onFBConnectButtonClicked"
+	   android:contentDescription="@string/fbconnect" />
+    
+    <ImageView
+       android:id="@+id/twitter_connect_image"
+	   android:src="@drawable/twitter_connect"
+	   android:layout_gravity="center"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:onClick="onTwitterConnectButtonClicked"
+	   android:contentDescription="@string/twitterconnect" />
+
+    <Button
+        android:id="@+id/btn_create_account"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSkipButtonClicked"
+        android:text="@string/cont" />
+	    
+    
+</LinearLayout>
