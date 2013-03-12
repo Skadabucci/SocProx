@@ -17,6 +17,7 @@ public class AlertDialogManager {
 	 * */
 	public void showAlertDialog(Context context, String title, String message,
 			Boolean status) {
+		// Creating an AlertDialog object
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
 		// Setting Dialog Title
