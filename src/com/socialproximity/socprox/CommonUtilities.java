@@ -1,5 +1,7 @@
 package com.socialproximity.socprox;
 
+// JOE WAS HERE
+
 import android.content.Context;
 import android.content.Intent;
 
