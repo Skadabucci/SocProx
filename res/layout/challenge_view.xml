@@ -120,6 +120,15 @@
             android:layout_weight="1"
             android:text="@string/challenge_fail"
             android:onClick="onChallengeFailButtonClicked" />
+
+        <!--Added Cancel Challenge Button-->
+        <Button 
+            android:id="@+id/btn_challenge_cancel" 
+            android:layout_width="0dp" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="1" 
+            android:text="@string/challenge_cancel" 
+            android:onClick="onChallengeCancelButtonClicked" /> 
         
     </LinearLayout>
 
