@@ -2,40 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#006699" >
-    
+    android:background="@color/black"
+    android:orientation="vertical" >
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/sync_prompt"
-        android:gravity="center" />
-    
+        android:textColor="@color/white" />
+
     <ImageView
-       android:id="@+id/facebook_connect_image"
-	   android:src="@drawable/facebook_connect"
-	   android:layout_gravity="center"
-	   android:layout_width="wrap_content"
-	   android:layout_height="wrap_content"
-	   android:onClick="onFBConnectButtonClicked"
-	   android:contentDescription="@string/fbconnect" />
-    
+        android:id="@+id/facebook_connect_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/fbconnect"
+        android:onClick="onFBConnectButtonClicked"
+        android:src="@drawable/facebook_connect" />
+
     <ImageView
-       android:id="@+id/twitter_connect_image"
-	   android:src="@drawable/twitter_connect"
-	   android:layout_gravity="center"
-	   android:layout_width="wrap_content"
-	   android:layout_height="wrap_content"
-	   android:onClick="onTwitterConnectButtonClicked"
-	   android:contentDescription="@string/twitterconnect" />
+        android:id="@+id/twitter_connect_image"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/twitterconnect"
+        android:onClick="onTwitterConnectButtonClicked"
+        android:src="@drawable/twitter_connect" />
 
     <Button
         android:id="@+id/btn_create_account"
-        android:layout_gravity="center"
-        android:layout_width="fill_parent"
+        android:layout_width="173dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:onClick="onSkipButtonClicked"
         android:text="@string/cont" />
-	    
-    
+
 </LinearLayout>

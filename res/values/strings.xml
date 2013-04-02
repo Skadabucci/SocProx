@@ -10,7 +10,7 @@
     <string name="refresh">Refresh</string>
     <string name="challenge_success">I Succeeded</string>
     <string name="challenge_fail">I Failed</string>
-    <string name="challenge_dialog">New Challenge\nHas Arrived!</string>
+    <string name="challenge_dialog">A New Challenge!</string>
     <string name="challenge_info">Challenge Info:</string>
     <string name="loading_challenge">Loading Challenge</string>
     <string name="logo">Logo</string>
@@ -26,7 +26,7 @@
     <string name="register_alias">Register an alias (Facebook, Twitter)</string>
     <string name="skip">Skip</string>
     <string name="cont">Continue</string>
-    <string name="login">Login</string>
+    <string name="login">Login with SocProx</string>
     <string name="logout">Logout</string>
     <string name="signup">Signup</string>
     <string name="close">Close</string>

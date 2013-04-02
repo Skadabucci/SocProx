@@ -2,18 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#006699" >
+    android:background="@color/white"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tv_challenge_dialog"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:lines="3"
         android:text="@string/loading_challenge"
-        android:typeface="serif"
-        android:textSize="20dp" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:typeface="serif" />
     
 	<!-- START SEPARATOR -->
 	<View 

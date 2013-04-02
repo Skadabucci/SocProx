@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#006699"
+    android:background="@color/black"
     android:orientation="vertical" >
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="186dp"
-        android:src="@drawable/logo" 
-        android:contentDescription="@string/logo" />
+        android:layout_width="516dp"
+        android:layout_height="234dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -24,7 +24,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_username"
-        android:singleLine="true"/>
+        android:singleLine="true" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -38,13 +38,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_password1"
-        android:singleLine="true"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:singleLine="true" />
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="fill_parent"
+        android:layout_width="193dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:onClick="onLoginButtonClicked"
         android:text="@string/login" />
 

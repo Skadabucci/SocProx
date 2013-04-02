@@ -2,18 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#006699" >
+    android:background="@color/white"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tv_challenge_dialog"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0.01"
         android:gravity="center"
         android:lines="3"
         android:text="@string/challenge_dialog"
-        android:typeface="serif"
-        android:textSize="20dp" />
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:typeface="serif" />
     
 	<!-- START SEPARATOR -->
 	<View 
@@ -25,9 +27,9 @@
 	<TextView
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
+	    android:background="@color/black"
 	    android:text="@string/challenge_info"
-	    android:background="#000000"
-	    android:textSize="16dp" />
+	    android:textSize="18dp" />
 	
 	<!-- START SEPARATOR -->
 	<View 
@@ -40,7 +42,7 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="1"
-	    android:background="#222222">
+	    android:background="@color/black" >
 	    
 	    <LinearLayout
 	        android:orientation="vertical"
@@ -48,9 +50,10 @@
 	        android:layout_height="wrap_content">
 	        
 	        <TextView
-	            android:text="@string/name"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"/>
+	            android:layout_height="wrap_content"
+	            android:text="@string/name" />
+
 	        <TextView 
 	            android:id="@+id/tv_challenge_acc_name"
 	            android:layout_width="fill_parent"
@@ -112,14 +115,14 @@
             android:layout_weight="1"
             android:text="@string/accept"
             android:onClick="onChallengeAcceptButtonClicked" />
-        
+
         <Button
             android:id="@+id/btn_challenge_denied"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/deny"
-            android:onClick="onChallengeDenyButtonClicked" />
+            android:onClick="onChallengeDenyButtonClicked"
+            android:text="@string/deny" />
         
     </LinearLayout>
 
