@@ -105,14 +105,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
-        
-        <Button 
+
+        <Button
             android:id="@+id/btn_challenge_accepted"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/challenge_success"
-            android:onClick="onChallengeSuccessButtonClicked" />
+            android:onClick="onChallengeSuccessButtonClicked"
+            android:text="@string/challenge_success" />
         
         <Button
             android:id="@+id/btn_challenge_denied"

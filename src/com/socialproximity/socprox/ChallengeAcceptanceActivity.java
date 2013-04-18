@@ -92,6 +92,7 @@ public class ChallengeAcceptanceActivity extends Activity {
     	
     	UpdateChallengeAsyncTask task = new UpdateChallengeAsyncTask();
     	task.execute();
+    	finish();
     }
     
     public void onChallengeDenyButtonClicked(View v){
@@ -100,6 +101,7 @@ public class ChallengeAcceptanceActivity extends Activity {
     	
     	UpdateChallengeAsyncTask task = new UpdateChallengeAsyncTask();
     	task.execute();
+    	finish();
     }
     
     private boolean executeREST(String call) {
