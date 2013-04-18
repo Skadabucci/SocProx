@@ -17,7 +17,8 @@ public class AlertDialogManager {
 	 * @param status - success/failure (used to set icon)
 	 * 				 - pass null if you don't want icon
 	 * */
-	public void showAlertDialog(Context context, String title, String message,
+    
+    	public void showAlertDialog(Context context, String title, String message,
 			Boolean status) {
 		// Creating an AlertDialog object
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();

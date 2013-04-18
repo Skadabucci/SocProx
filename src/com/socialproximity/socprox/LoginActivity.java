@@ -49,12 +49,20 @@ public class LoginActivity extends Activity {
 		} else {
 			if (!mBluetoothAdapter.isEnabled()) {
 				// prompt user to enable bluetooth
-				Intent enableBtIntent = new Intent(
-						BluetoothAdapter.ACTION_REQUEST_ENABLE);
-				startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+			    boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun", true);
+                if (firstrun){
+                    Intent enableBtIntent = new Intent(
+                            BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+                    
+                    // Save the state
+                    getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("firstrun", false)
+                    .commit();
+                }    
 			}
 		}
-        
         mProgressDialog = new ProgressDialog(LoginActivity.this);
     	mProgressDialog.setMessage("Logging In");
     	mProgressDialog.setIndeterminate(true);
