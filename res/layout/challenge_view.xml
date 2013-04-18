@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/white"
+    android:background="@color/black"
     android:orientation="vertical" >
 
     <TextView
@@ -12,7 +12,7 @@
         android:gravity="center"
         android:lines="3"
         android:text="@string/loading_challenge"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:typeface="serif" />
     
@@ -41,7 +41,7 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="1"
-	    android:background="#222222">
+	    android:background="#000000">
 	    
 	    <LinearLayout
 	        android:orientation="vertical"

@@ -7,9 +7,10 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="515dp"
-        android:layout_height="264dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.03"
         android:src="@drawable/logo" />
 
     <ImageButton

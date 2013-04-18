@@ -7,8 +7,9 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="516dp"
-        android:layout_height="234dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.21"
         android:contentDescription="@string/logo"
         android:src="@drawable/logo" />
 
